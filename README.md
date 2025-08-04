@@ -1,4 +1,4 @@
-# J. Vale Author Website
+# J. Vale Author
 
 Official author website for J. Vale, featuring The Veilbound Saga fantasy book series.
 
