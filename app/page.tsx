@@ -22,14 +22,14 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient glow">Tales of Moonfire</span>
+            <h1 className="hero-title mb-6">
+              <span className="text-gradient glow">Two Epic</span>
               <br />
-              <span className="text-foreground/80">and Shattered Realms</span>
+              <span className="text-foreground/80 hero-subtitle">Fantasy Series</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground/70 mb-8 max-w-3xl mx-auto">
-              Where magic costs more than gold, and love might be the most dangerous spell of all
+              Enter two distinct worlds of magic, mystery, and adventure
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -60,84 +60,94 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient glow"
+            className="section-title text-center mb-16 text-gradient glow"
           >
-            The Veilbound Saga
+            Featured Series
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Book 1 */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex flex-col md:flex-row gap-6 items-center"
+              className="elegant-card rounded-3xl p-8 mb-12"
             >
-              <div className="relative group">
-                <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
-                <Image
-                  src="/images/marked-by-moonfire-cover.jpg"
-                  alt="Marked by Moonfire book cover"
-                  width={256}
-                  height={384}
-                  className="relative rounded-lg shadow-2xl"
-                  priority
-                />
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-2 text-gradient">The Veilbound Saga</h3>
+                <p className="text-foreground/60">A world where magic demands sacrifice</p>
               </div>
               
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-2">Marked by Moonfire</h3>
-                <p className="text-foreground/70 mb-4">
-                  Book One of The Veilbound Saga
-                </p>
-                <p className="text-foreground/60 mb-6">
-                  When ancient magic awakens in her blood, Lyra must choose between 
-                  the safety of ignorance and the perilous path of power.
-                </p>
-                <Link
-                  href="/books/marked-by-moonfire"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                >
-                  Learn More
-                  <ArrowRight size={16} />
-                </Link>
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="book-cover-glow">
+                  <Image
+                    src="/images/marked-by-moonfire-cover.jpg"
+                    alt="Marked by Moonfire book cover"
+                    width={280}
+                    height={420}
+                    className="rounded-xl shadow-2xl"
+                    priority
+                  />
+                </div>
+                
+                <div className="flex-1 text-center lg:text-left">
+                  <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
+                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                    When ancient magic awakens in her blood, Lyra must choose between 
+                    the safety of ignorance and the perilous path of power. In a world where 
+                    every spell demands payment in pain, memory, or years of life.
+                  </p>
+                  <Link
+                    href="/books/marked-by-moonfire"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                  >
+                    Read More
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
             {/* Book 2 */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col md:flex-row gap-6 items-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="elegant-card rounded-3xl p-8"
             >
-              <div className="relative group">
-                <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
-                <Image
-                  src="/images/shattered-world-cover.jpg"
-                  alt="Shattered World book cover"
-                  width={256}
-                  height={384}
-                  className="relative rounded-lg shadow-2xl"
-                />
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-2 text-gradient">Shattered World</h3>
+                <p className="text-foreground/60">A realm where reality fractures</p>
               </div>
               
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-2">Shattered World</h3>
-                <p className="text-foreground/70 mb-4">
-                  The First Gate
-                </p>
-                <p className="text-foreground/60 mb-6">
-                  The veil between worlds grows thin, and only those marked by 
-                  moonfire can stand against the coming darkness.
-                </p>
-                <Link
-                  href="/books/shattered-world"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                >
-                  Coming Soon
-                  <ArrowRight size={16} />
-                </Link>
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="book-cover-glow">
+                  <Image
+                    src="/images/shattered-world-cover.jpg"
+                    alt="Shattered World: The First Gate book cover"
+                    width={280}
+                    height={420}
+                    className="rounded-xl shadow-2xl"
+                  />
+                </div>
+                
+                <div className="flex-1 text-center lg:text-left">
+                  <h4 className="text-2xl font-bold mb-3">The First Gate</h4>
+                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                    Ancient gates begin to crack, releasing creatures from realms where hope 
+                    dies slowly. As reality itself threatens to shatter, only those willing 
+                    to pay the ultimate price can prevent total collapse.
+                  </p>
+                  <Link
+                    href="/books/shattered-world"
+                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </div>

@@ -16,23 +16,27 @@ export default function BooksPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient glow">
-            The Veilbound Saga
+          <h1 className="hero-title mb-6 text-gradient glow">
+            Fantasy Series
           </h1>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            A fantasy series where ancient magic awakens, worlds collide, and love becomes the most dangerous spell of all.
+            Two distinct worlds of magic and adventure, each with their own mysteries to uncover.
           </p>
         </motion.div>
 
         {/* Books Grid */}
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="space-y-16">
           {/* Book 1 */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="magic-border rounded-2xl p-8"
+            className="elegant-card rounded-3xl p-10"
           >
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-3 text-gradient">The Veilbound Saga</h2>
+              <p className="text-foreground/60 text-lg">Where magic demands sacrifice</p>
+            </div>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-shrink-0">
                 <div className="relative group">
@@ -86,11 +90,15 @@ export default function BooksPage() {
 
           {/* Book 2 */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="magic-border rounded-2xl p-8"
+            className="elegant-card rounded-3xl p-10"
           >
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-3 text-gradient">Shattered World</h2>
+              <p className="text-foreground/60 text-lg">Where reality fractures</p>
+            </div>
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-shrink-0">
                 <div className="relative group">

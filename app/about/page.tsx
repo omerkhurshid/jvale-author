@@ -16,11 +16,11 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient glow">
+          <h1 className="hero-title mb-6 text-gradient glow">
             About J. Vale
           </h1>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Weaver of tales where magic costs more than gold and love might be the most dangerous spell of all.
+            A storyteller crafting epic fantasy worlds from real-world adventures and digital realms.
           </p>
         </motion.div>
 
@@ -51,15 +51,15 @@ export default function AboutPage() {
               <div className="magic-border rounded-xl p-6 space-y-4">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-foreground/80">Somewhere between worlds</span>
+                  <span className="text-foreground/80">Global nomad, currently settled</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <BookOpen className="w-5 h-5 text-primary" />
-                  <span className="text-foreground/80">The Veilbound Saga</span>
+                  <span className="text-foreground/80">Two fantasy series</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Coffee className="w-5 h-5 text-primary" />
-                  <span className="text-foreground/80">Fueled by tea and starlight</span>
+                  <span className="text-foreground/80">Cat dad, beach lover</span>
                 </div>
               </div>
 
@@ -86,62 +86,68 @@ export default function AboutPage() {
             {/* Main Bio */}
             <div className="space-y-6 text-foreground/80 leading-relaxed">
               <p className="text-lg">
-                Born beneath the shadow of ancient mountains where mist clings to forgotten ruins, J. Vale spent their 
-                formative years wandering through libraries older than memory and streets that whisper of untold stories.
+                Born in Asia and raised across continents, J. Vale's childhood was spent moving between cultures, 
+                languages, and landscapes—from bustling Asian metropolises to quiet European villages, and eventually 
+                to the diverse cities of America.
               </p>
               
               <p>
-                Growing up in a place where reality blurs at the edges—where morning fog might reveal glimpses of other 
-                worlds and midnight bells echo with meanings beyond sound—shaped their unique voice in fantasy literature. 
-                The peculiar nature of their hometown, with its ever-shifting architecture and residents who speak in 
-                riddles, instilled in Vale a deep fascination with the spaces between worlds.
+                This nomadic upbringing sparked an early love for storytelling and world-building. As a child, Vale 
+                found solace in fantasy novels and video games, spending countless hours exploring digital realms and 
+                imagining new worlds. Epic fantasy series and RPGs became his companions through frequent relocations, 
+                teaching him that home could be found in the stories we tell.
               </p>
               
               <p>
-                Local legends speak of doors that open only on certain nights and books that write themselves in the old 
-                quarter's dusty shops—experiences that would later breathe life into the pages of The Veilbound Saga. 
-                When not crafting tales of moonfire and shattered realms, Vale can be found collecting antique keys that 
-                open no known locks, studying star charts from civilizations that may never have existed, and conversing 
-                with cats who seem to know far more than they should.
+                After years of traveling and working across different industries in Europe, Asia, and the US, Vale 
+                finally settled down and turned his lifelong passion for storytelling into a writing career. His 
+                international background and love for world-building naturally led him to fantasy literature, where 
+                he could create the kind of immersive worlds he'd always dreamed of exploring.
               </p>
               
               <p>
-                Vale's debut novel, "Marked by Moonfire," introduces readers to a world where magic costs more than gold 
-                and love might be the most dangerous spell of all. The upcoming "Shattered World: The First Gate" promises 
-                to unlock mysteries that some believe are better left sealed.
+                When not writing, Vale can be found reading the latest fantasy releases, diving into a new video game, 
+                relaxing at the beach, swimming, or spending time with his four beloved companions—two cats and two dogs 
+                who frequently interrupt his writing sessions and provide endless inspiration (and distraction).
+              </p>
+              
+              <p>
+                His debut novel, "Marked by Moonfire," launches The Veilbound Saga, while "The First Gate" begins 
+                the separate Shattered World series—two distinct fantasy universes born from a lifetime of wandering 
+                and wondering "what if?"
               </p>
             </div>
 
             {/* Author's Note */}
-            <div className="magic-border rounded-xl p-8">
+            <div className="elegant-card rounded-xl p-8">
               <h2 className="text-2xl font-bold mb-4 text-gradient">A Note from the Author</h2>
               <blockquote className="text-foreground/80 italic leading-relaxed">
-                "I write for those who've felt the pull of another world just beyond the edge of sight, for the dreamers 
-                who know that some doors, once opened, can never be closed again. My stories come from the twilight 
-                places—neither fully here nor there—where the impossible becomes inevitable."
+                "Growing up between worlds—both literally and in the pages of books and games—taught me that the best 
+                stories come from asking 'what if?' Whether it's exploring a new country or a new fantasy realm, 
+                I've always been drawn to places where anything is possible. That's the magic I try to bring to my writing."
               </blockquote>
               <p className="text-sm text-foreground/60 mt-4">— J. Vale</p>
             </div>
 
             {/* Fun Facts */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="magic-border rounded-xl p-6">
+              <div className="elegant-card rounded-xl p-6">
                 <h3 className="text-lg font-bold mb-3">Writing Habits</h3>
                 <ul className="space-y-2 text-foreground/70">
-                  <li>• Writes exclusively by candlelight after midnight</li>
-                  <li>• Has a collection of 47 different tea blends</li>
-                  <li>• Keeps a dream journal by the bedside</li>
-                  <li>• Never writes without wearing a particular silver ring</li>
+                  <li>• Writes with cats competing for keyboard space</li>
+                  <li>• Always has a cup of coffee within reach</li>
+                  <li>• Keeps a notebook for random story ideas</li>
+                  <li>• Takes beach walks to work through plot problems</li>
                 </ul>
               </div>
               
-              <div className="magic-border rounded-xl p-6">
+              <div className="elegant-card rounded-xl p-6">
                 <h3 className="text-lg font-bold mb-3">Inspirations</h3>
                 <ul className="space-y-2 text-foreground/70">
-                  <li>• Ancient mythology and folklore</li>
-                  <li>• Abandoned places and forgotten stories</li>
-                  <li>• The liminal spaces between day and night</li>
-                  <li>• Readers who believe in magic</li>
+                  <li>• Epic fantasy novels and immersive RPGs</li>
+                  <li>• Cultural mythology from around the world</li>
+                  <li>• The beauty of different landscapes he's lived in</li>
+                  <li>• Fellow travelers and storytellers</li>
                 </ul>
               </div>
             </div>
