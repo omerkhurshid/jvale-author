@@ -92,7 +92,7 @@ export default function Home() {
                 
                 <div className="flex-1 text-center lg:text-left">
                   <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
+                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
                     When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
                   </p>

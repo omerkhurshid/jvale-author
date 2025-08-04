@@ -62,7 +62,7 @@ export default function BooksPage() {
                 
                 <div className="flex items-center gap-2 mb-4 text-foreground/60">
                   <Calendar className="w-4 h-4" />
-                  <span>Available Now</span>
+                  <span>Coming Soon</span>
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
