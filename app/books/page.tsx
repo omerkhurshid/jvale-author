@@ -66,7 +66,7 @@ export default function BooksPage() {
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
-                  When ancient magic awakens in her blood, Lyra must choose between the safety of ignorance and the perilous path of power. But some destinies cannot be denied, and the moonfire that marks her will either save her world—or destroy it.
+                  When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -128,7 +128,7 @@ export default function BooksPage() {
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
-                  The veil between worlds grows thin, and only those marked by moonfire can stand against the coming darkness. As ancient gates begin to open, Lyra must master powers she barely understands—before everything she loves is lost forever.
+                  Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3">

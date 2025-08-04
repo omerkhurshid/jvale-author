@@ -35,14 +35,13 @@ export default function AboutPage() {
           >
             <div className="sticky top-24">
               {/* Author Photo */}
-              <div className="relative group mb-8">
-                <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors rounded-2xl" />
+              <div className="book-cover-glow mb-8">
                 <Image
                   src="/images/author-photo.jpg"
                   alt="J. Vale author photo"
                   width={400}
                   height={400}
-                  className="relative rounded-2xl shadow-2xl w-full"
+                  className="rounded-2xl shadow-2xl w-full"
                   priority
                 />
               </div>

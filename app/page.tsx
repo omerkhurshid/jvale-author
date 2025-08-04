@@ -94,9 +94,7 @@ export default function Home() {
                   <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
                   <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
-                    When ancient magic awakens in her blood, Lyra must choose between 
-                    the safety of ignorance and the perilous path of power. In a world where 
-                    every spell demands payment in pain, memory, or years of life.
+                    When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
                   </p>
                   <Link
                     href="/books/marked-by-moonfire"
@@ -136,9 +134,7 @@ export default function Home() {
                   <h4 className="text-2xl font-bold mb-3">The First Gate</h4>
                   <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
-                    Ancient gates begin to crack, releasing creatures from realms where hope 
-                    dies slowly. As reality itself threatens to shatter, only those willing 
-                    to pay the ultimate price can prevent total collapse.
+                    When seventeen year old Kira's father vanishes and a mysterious storm appears above her village, she discovers an ancient scroll with a cryptic message: "Find the gate." As the last of the bridgewalkers, she must decide whether to restore the bridges between worlds or let the realms remain forever divided.
                   </p>
                   <Link
                     href="/books/shattered-world"

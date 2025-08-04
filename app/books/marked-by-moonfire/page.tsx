@@ -82,7 +82,7 @@ export default function MarkedByMoonfirePage() {
             </div>
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              When ancient magic awakens in her blood, Lyra must choose between the safety of ignorance and the perilous path of power.
+              When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic.
             </p>
 
             {/* Buy Links */}
@@ -120,26 +120,16 @@ export default function MarkedByMoonfirePage() {
             <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                In the realm of Aethermoor, magic is not a gift—it's a debt. Every spell cast, every enchantment woven, 
-                demands payment in pain, memory, or years of life. For centuries, this balance has kept the world stable, 
-                with only the desperate or the foolish daring to wield such power.
+                When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
               </p>
               <p>
-                Lyra Nightwhisper has spent her life avoiding magic, content to work as a simple herbalist in the 
-                mountain village of Thornvale. But when strange marks begin appearing on her skin—silver lines that 
-                pulse with otherworldly light—she discovers that some destinies cannot be denied.
+                Enter Kael, a battle hardened General of the Nightshade Court, who recognizes Asha's mark for what it truly is: an Eldermark, binding her to a prophecy that could either heal the fractured realms or destroy them entirely. As their fates become intertwined through an unbreakable soul bond, Asha must navigate dangerous court politics, mysterious powers awakening within her, and a growing connection to Kael that defies explanation.
               </p>
               <p>
-                The marks are moonfire, an ancient magic thought lost to legend. As the signs spread across her body, 
-                Lyra finds herself at the center of a conflict that threatens to tear apart the very fabric of reality. 
-                Dark forces stir in the shadows, seeking to claim her power for their own, while those she trusted 
-                most begin to see her as a threat.
+                But the mark has awakened more than just magic—it has drawn the attention of those who would use Asha's power for their own ends. With enemies closing in and the Veil between worlds growing unstable, Asha faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
               </p>
               <p>
-                With the help of Kael, a mysterious warrior with secrets of his own, Lyra must learn to control the 
-                moonfire before it consumes her—or before those who hunt her succeed in their deadly quest. But in a 
-                world where magic demands sacrifice, she must decide: what price is she willing to pay to save 
-                everything she loves?
+                A sweeping fantasy romance that weaves together magic, destiny, and the power of choosing love over fate.
               </p>
             </div>
           </div>

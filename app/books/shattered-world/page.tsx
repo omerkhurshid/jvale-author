@@ -77,7 +77,7 @@ export default function ShatteredWorldPage() {
             </div>
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              The veil between worlds grows thin, and only those marked by moonfire can stand against the coming darkness.
+              When a mysterious storm appears above her village and her father vanishes without a trace, Kira discovers an ancient scroll bearing a cryptic message: "Find the gate."
             </p>
 
             {/* Coming Soon Actions */}
@@ -111,24 +111,19 @@ export default function ShatteredWorldPage() {
             <h2 className="text-3xl font-bold mb-6">What's Coming</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                Six months have passed since Lyra first felt the moonfire awaken within her. The silver marks that once 
-                terrified her have become a source of power—and an ever-present reminder of the price magic demands. 
-                But as she grows stronger, so too does the darkness that hunts her.
+                Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
               </p>
               <p>
-                Ancient gates, sealed for millennia, have begun to crack. Through these fractures seep creatures of 
-                shadow and nightmare, beings from realms where moonfire burns cold and hope dies slowly. The barriers 
-                between worlds are failing, and those with the power to mend them are scattered, broken, or lost.
+                The scroll awakens something long dormant within Kira—the ability to walk between realms through magical gates that have been sealed since the Sundering, a catastrophic event that fractured the world centuries ago. Accompanied by Lorn, a Guild archivist with his own hidden knowledge, Kira steps through her first gate into lands forgotten by history.
               </p>
               <p>
-                As Lyra and Kael search for others like them—the Veilbound, marked by moonfire and cursed with 
-                impossible choices—they discover that the gates' failure is no accident. Someone, or something, 
-                is orchestrating the collapse of reality itself.
+                As they journey through shattered realms and encounter the remnants of a lost civilization, Kira learns she may be the last of the bridgewalkers—legendary figures who once connected the worlds before fear and politics tore them apart. But awakening the gates has consequences, and malevolent forces hunt her across the fractured realms.
               </p>
               <p>
-                With time running out and allies few, Lyra must master abilities that could save or damn her world. 
-                But the first gate is already opening, and what emerges from beyond will test not just her power, 
-                but her very humanity.
+                With each gate she opens, Kira uncovers more about the truth behind the Sundering and her own mysterious heritage. Now she must decide whether to restore the bridges between worlds—risking the dangers that originally caused their destruction—or let the realms remain forever divided.
+              </p>
+              <p>
+                An epic fantasy adventure about courage, discovery, and the power of connection in a broken world.
               </p>
             </div>
           </div>
