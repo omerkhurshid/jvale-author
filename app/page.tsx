@@ -123,7 +123,7 @@ export default function Home() {
                 <div className="book-cover-glow">
                   <Image
                     src="/images/shattered-world-cover.jpg"
-                    alt="Shattered World: The First Gate book cover"
+                    alt="The First Gate book cover"
                     width={280}
                     height={420}
                     className="rounded-xl shadow-2xl"

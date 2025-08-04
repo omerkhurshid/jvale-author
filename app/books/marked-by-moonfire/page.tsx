@@ -3,15 +3,9 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star, Calendar, BookOpen, ShoppingCart } from 'lucide-react'
+import { ArrowLeft, Star } from 'lucide-react'
 
 export default function MarkedByMoonfirePage() {
-  const buyLinks = [
-    { name: 'Amazon', url: '#', primary: true },
-    { name: 'Barnes & Noble', url: '#' },
-    { name: 'Apple Books', url: '#' },
-    { name: 'Kobo', url: '#' },
-  ]
 
   return (
     <div className="min-h-screen py-20 px-4">
@@ -70,41 +64,11 @@ export default function MarkedByMoonfirePage() {
               Marked by Moonfire
             </h1>
 
-            <div className="flex items-center gap-6 mb-6 text-foreground/70">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                <span>Available Now</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5" />
-                <span>Fantasy • 350 pages</span>
-              </div>
-            </div>
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
               When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic.
             </p>
 
-            {/* Buy Links */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Available At:</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {buyLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.url}
-                    className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors ${
-                      link.primary
-                        ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                        : 'magic-border text-foreground hover:text-primary'
-                    }`}
-                  >
-                    <ShoppingCart size={16} />
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-            </div>
           </motion.div>
         </div>
 
@@ -136,47 +100,6 @@ export default function MarkedByMoonfirePage() {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Details */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Book Details</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Series:</span>
-                  <span>The Veilbound Saga</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Book:</span>
-                  <span>1 of 3</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Genre:</span>
-                  <span>Fantasy</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Pages:</span>
-                  <span>350</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">ISBN:</span>
-                  <span>978-0-123456-78-9</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Preview */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Free Preview</h3>
-              <p className="text-foreground/70 mb-4">
-                Read the first chapter and discover the world of moonfire magic.
-              </p>
-              <Link
-                href="/preview/marked-by-moonfire"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors w-full justify-center"
-              >
-                <BookOpen size={16} />
-                Read Preview
-              </Link>
-            </div>
 
             {/* Newsletter */}
             <div className="magic-border rounded-xl p-6">

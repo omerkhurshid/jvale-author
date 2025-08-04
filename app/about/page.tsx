@@ -151,23 +151,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Current Projects */}
-            <div className="magic-border rounded-xl p-8">
-              <h2 className="text-2xl font-bold mb-4">Currently Working On</h2>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold">Shattered World: The First Gate</span>
-                  <span className="text-primary">In Progress</span>
-                </div>
-                <div className="w-full bg-secondary rounded-full h-2">
-                  <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
-                </div>
-                <p className="text-foreground/70 text-sm">
-                  The second book in The Veilbound Saga is currently 75% complete. Expected release: 2024
-                </p>
-              </div>
-            </div>
-
             {/* Newsletter CTA */}
             <div className="magic-border rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Stay Connected</h2>

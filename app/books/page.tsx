@@ -69,21 +69,13 @@ export default function BooksPage() {
                   When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/books/marked-by-moonfire"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight size={16} />
-                  </Link>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
-                  >
-                    Buy Now
-                  </a>
-                </div>
+                <Link
+                  href="/books/marked-by-moonfire"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight size={16} />
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -105,7 +97,7 @@ export default function BooksPage() {
                   <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
                   <Image
                     src="/images/shattered-world-cover.jpg"
-                    alt="Shattered World book cover"
+                    alt="The First Gate book cover"
                     width={200}
                     height={300}
                     className="relative rounded-lg shadow-2xl mx-auto"
@@ -116,11 +108,10 @@ export default function BooksPage() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
                   <Star className="w-5 h-5 text-primary" />
-                  <span className="text-primary font-semibold">Book Two</span>
+                  <span className="text-primary font-semibold">Book One</span>
                 </div>
                 
-                <h2 className="text-3xl font-bold mb-4">Shattered World</h2>
-                <p className="text-lg text-foreground/80 mb-4">The First Gate</p>
+                <h2 className="text-3xl font-bold mb-4">The First Gate</h2>
                 
                 <div className="flex items-center gap-2 mb-4 text-foreground/60">
                   <Calendar className="w-4 h-4" />
@@ -131,21 +122,13 @@ export default function BooksPage() {
                   Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/books/shattered-world"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight size={16} />
-                  </Link>
-                  <Link
-                    href="/newsletter"
-                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
-                  >
-                    Get Notified
-                  </Link>
-                </div>
+                <Link
+                  href="/books/shattered-world"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight size={16} />
+                </Link>
               </div>
             </div>
           </motion.div>

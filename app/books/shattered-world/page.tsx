@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star, Calendar, BookOpen, Bell } from 'lucide-react'
+import { ArrowLeft, Star, BookOpen, Bell } from 'lucide-react'
 
 export default function ShatteredWorldPage() {
   return (
@@ -38,7 +38,7 @@ export default function ShatteredWorldPage() {
               <div className="absolute inset-0 bg-primary/30 blur-2xl group-hover:bg-primary/40 transition-colors" />
               <Image
                 src="/images/shattered-world-cover.jpg"
-                alt="Shattered World book cover"
+                alt="The First Gate book cover"
                 width={400}
                 height={600}
                 className="relative rounded-lg shadow-2xl"
@@ -56,25 +56,13 @@ export default function ShatteredWorldPage() {
           >
             <div className="flex items-center gap-2 mb-4">
               <Star className="w-6 h-6 text-primary" />
-              <span className="text-primary font-semibold text-lg">The Veilbound Saga • Book Two</span>
+              <span className="text-primary font-semibold text-lg">Shattered World • Book One</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gradient glow">
-              Shattered World
+              The First Gate
             </h1>
-            
-            <h2 className="text-2xl text-foreground/80 mb-6">The First Gate</h2>
 
-            <div className="flex items-center gap-6 mb-6 text-foreground/70">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                <span>Coming Soon</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5" />
-                <span>Fantasy • Est. 400 pages</span>
-              </div>
-            </div>
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
               When a mysterious storm appears above her village and her father vanishes without a trace, Kira discovers an ancient scroll bearing a cryptic message: "Find the gate."
@@ -85,7 +73,7 @@ export default function ShatteredWorldPage() {
               <div className="magic-border rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-2">Release Updates</h3>
                 <p className="text-foreground/70 mb-4 text-sm">
-                  Be the first to know when Shattered World is available. Get exclusive previews and behind-the-scenes content.
+                  Be the first to know when The First Gate is available. Get exclusive previews and behind-the-scenes content.
                 </p>
                 <Link
                   href="/newsletter"
@@ -130,64 +118,22 @@ export default function ShatteredWorldPage() {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Details */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Book Details</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Series:</span>
-                  <span>The Veilbound Saga</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Book:</span>
-                  <span>2 of 3</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Genre:</span>
-                  <span>Fantasy</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Est. Pages:</span>
-                  <span>400</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-foreground/60">Status:</span>
-                  <span className="text-primary">In Progress</span>
-                </div>
-              </div>
-            </div>
 
-            {/* First Book */}
+            {/* Other Series */}
             <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Start the Series</h3>
+              <h3 className="text-xl font-bold mb-4">Explore Other Series</h3>
               <p className="text-foreground/70 mb-4">
-                Haven't read the first book yet? Start your journey with Marked by Moonfire.
+                Discover another epic fantasy adventure in The Veilbound Saga.
               </p>
               <Link
                 href="/books/marked-by-moonfire"
                 className="inline-flex items-center gap-2 bg-secondary text-foreground px-4 py-2 rounded-lg font-semibold hover:bg-secondary/80 transition-colors w-full justify-center"
               >
                 <BookOpen size={16} />
-                Read Book One
+                The Veilbound Saga
               </Link>
             </div>
 
-            {/* Progress Updates */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Writing Progress</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span className="text-foreground/60">First Draft:</span>
-                  <span className="text-primary">75%</span>
-                </div>
-                <div className="w-full bg-secondary rounded-full h-2">
-                  <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
-                </div>
-                <p className="text-xs text-foreground/60">
-                  Updates posted monthly in the newsletter
-                </p>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
