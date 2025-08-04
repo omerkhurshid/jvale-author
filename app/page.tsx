@@ -75,11 +75,14 @@ export default function Home() {
             >
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
-                <div className="relative w-64 h-96 bg-secondary rounded-lg shadow-2xl overflow-hidden">
-                  <div className="flex items-center justify-center h-full text-foreground/50">
-                    Book Cover 1
-                  </div>
-                </div>
+                <Image
+                  src="/images/marked-by-moonfire-cover.jpg"
+                  alt="Marked by Moonfire book cover"
+                  width={256}
+                  height={384}
+                  className="relative rounded-lg shadow-2xl"
+                  priority
+                />
               </div>
               
               <div className="flex-1 text-center md:text-left">
@@ -110,11 +113,13 @@ export default function Home() {
             >
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
-                <div className="relative w-64 h-96 bg-secondary rounded-lg shadow-2xl overflow-hidden">
-                  <div className="flex items-center justify-center h-full text-foreground/50">
-                    Book Cover 2
-                  </div>
-                </div>
+                <Image
+                  src="/images/shattered-world-cover.jpg"
+                  alt="Shattered World book cover"
+                  width={256}
+                  height={384}
+                  className="relative rounded-lg shadow-2xl"
+                />
               </div>
               
               <div className="flex-1 text-center md:text-left">
