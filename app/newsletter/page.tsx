@@ -10,8 +10,19 @@ export default function NewsletterPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Integrate with email service (ConvertKit, Mailchimp, etc.)
-    console.log('Newsletter signup:', email)
+    
+    // Get Substack URL from environment variables
+    const substackUrl = process.env.NEXT_PUBLIC_SUBSTACK_URL
+    
+    if (substackUrl) {
+      // Redirect to Substack signup with email pre-filled
+      const substackSignupUrl = `${substackUrl}/subscribe?email=${encodeURIComponent(email)}`
+      window.open(substackSignupUrl, '_blank')
+    } else {
+      // Fallback: show success message and instructions
+      console.log('Newsletter signup:', email)
+    }
+    
     setIsSubmitted(true)
   }
 

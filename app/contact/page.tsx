@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Mail, MessageCircle, BookOpen, Users, Send } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,12 +13,44 @@ export default function ContactPage() {
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Integrate with contact form service
-    console.log('Contact form:', formData)
-    setIsSubmitted(true)
+    setIsLoading(true)
+    setError('')
+
+    try {
+      // EmailJS integration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing. Please set up your environment variables.')
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'J. Vale',
+        },
+        publicKey
+      )
+
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error('Failed to send email:', err)
+      setError('Failed to send message. Please try again or email directly.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -169,12 +202,19 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {error && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                  disabled={isLoading}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send size={16} />
-                  Send Message
+                  <Send size={16} className={isLoading ? 'animate-pulse' : ''} />
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </>
@@ -196,6 +236,7 @@ export default function ContactPage() {
                 onClick={() => {
                   setIsSubmitted(false)
                   setFormData({ name: '', email: '', subject: '', message: '' })
+                  setError('')
                 }}
                 className="magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors"
               >
