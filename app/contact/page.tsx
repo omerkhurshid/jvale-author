@@ -230,7 +230,7 @@ export default function ContactPage() {
               </div>
               <h2 className="text-3xl font-bold text-primary">Message Sent!</h2>
               <p className="text-foreground/70">
-                Thank you for reaching out! I'll get back to you as soon as possible, usually within 24-48 hours.
+                Thank you for reaching out! I'll get back to you as soon as possible, usually within 24 to 48 hours.
               </p>
               <button
                 onClick={() => {
@@ -256,7 +256,7 @@ export default function ContactPage() {
           <div className="magic-border rounded-xl p-6">
             <h3 className="text-xl font-bold mb-4">Response Time</h3>
             <p className="text-foreground/70 mb-4">
-              I typically respond to messages within 24-48 hours. For urgent business inquiries, 
+              I typically respond to messages within 24 to 48 hours. For urgent business inquiries, 
               please mention "URGENT" in your subject line.
             </p>
           </div>
@@ -279,7 +279,7 @@ export default function ContactPage() {
         >
           <h3 className="text-2xl font-bold mb-4">Stay Connected</h3>
           <p className="text-foreground/70 mb-6">
-            For regular updates about The Veilbound Saga and behind-the-scenes content, 
+            For regular updates about The Veilbound Saga and behind the scenes content, 
             join the newsletter for the fastest way to stay in touch.
           </p>
           <a

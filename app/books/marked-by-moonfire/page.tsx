@@ -66,7 +66,7 @@ export default function MarkedByMoonfirePage() {
 
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic.
+              When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic.
             </p>
 
           </motion.div>
@@ -84,13 +84,13 @@ export default function MarkedByMoonfirePage() {
             <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
+                When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
               </p>
               <p>
                 Enter Kael, a battle hardened General of the Nightshade Court, who recognizes Asha's mark for what it truly is: an Eldermark, binding her to a prophecy that could either heal the fractured realms or destroy them entirely. As their fates become intertwined through an unbreakable soul bond, Asha must navigate dangerous court politics, mysterious powers awakening within her, and a growing connection to Kael that defies explanation.
               </p>
               <p>
-                But the mark has awakened more than just magic—it has drawn the attention of those who would use Asha's power for their own ends. With enemies closing in and the Veil between worlds growing unstable, Asha faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
+                But the mark has awakened more than just magic: it has drawn the attention of those who would use Asha's power for their own ends. With enemies closing in and the Veil between worlds growing unstable, Asha faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
               </p>
               <p>
                 A sweeping fantasy romance that weaves together magic, destiny, and the power of choosing love over fate.

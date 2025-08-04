@@ -20,7 +20,7 @@ export default function AboutPage() {
             About J. Vale
           </h1>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            A storyteller crafting epic fantasy worlds from real-world adventures and digital realms.
+            A storyteller crafting epic fantasy worlds from real world adventures and digital realms.
           </p>
         </motion.div>
 
@@ -86,12 +86,12 @@ export default function AboutPage() {
             <div className="space-y-6 text-foreground/80 leading-relaxed">
               <p className="text-lg">
                 Born in Asia and raised across continents, J. Vale's childhood was spent moving between cultures, 
-                languages, and landscapes—from bustling Asian metropolises to quiet European villages, and eventually 
+                languages, and landscapes: from bustling Asian metropolises to quiet European villages, and eventually 
                 to the diverse cities of America.
               </p>
               
               <p>
-                This nomadic upbringing sparked an early love for storytelling and world-building. As a child, Vale 
+                This nomadic upbringing sparked an early love for storytelling and world building. As a child, Vale 
                 found solace in fantasy novels and video games, spending countless hours exploring digital realms and 
                 imagining new worlds. Epic fantasy series and RPGs became his companions through frequent relocations, 
                 teaching him that home could be found in the stories we tell.
@@ -100,19 +100,19 @@ export default function AboutPage() {
               <p>
                 After years of traveling and working across different industries in Europe, Asia, and the US, Vale 
                 finally settled down and turned his lifelong passion for storytelling into a writing career. His 
-                international background and love for world-building naturally led him to fantasy literature, where 
+                international background and love for world building naturally led him to fantasy literature, where 
                 he could create the kind of immersive worlds he'd always dreamed of exploring.
               </p>
               
               <p>
                 When not writing, Vale can be found reading the latest fantasy releases, diving into a new video game, 
-                relaxing at the beach, swimming, or spending time with his four beloved companions—two cats and two dogs 
+                relaxing at the beach, swimming, or spending time with his four beloved companions: two cats and two dogs 
                 who frequently interrupt his writing sessions and provide endless inspiration (and distraction).
               </p>
               
               <p>
                 His debut novel, "Marked by Moonfire," launches The Veilbound Saga, while "The First Gate" begins 
-                the separate Shattered World series—two distinct fantasy universes born from a lifetime of wandering 
+                the separate Shattered World series: two distinct fantasy universes born from a lifetime of wandering 
                 and wondering "what if?"
               </p>
             </div>
@@ -121,11 +121,11 @@ export default function AboutPage() {
             <div className="elegant-card rounded-xl p-8">
               <h2 className="text-2xl font-bold mb-4 text-gradient">A Note from the Author</h2>
               <blockquote className="text-foreground/80 italic leading-relaxed">
-                "Growing up between worlds—both literally and in the pages of books and games—taught me that the best 
+                "Growing up between worlds, both literally and in the pages of books and games, taught me that the best 
                 stories come from asking 'what if?' Whether it's exploring a new country or a new fantasy realm, 
                 I've always been drawn to places where anything is possible. That's the magic I try to bring to my writing."
               </blockquote>
-              <p className="text-sm text-foreground/60 mt-4">— J. Vale</p>
+              <p className="text-sm text-foreground/60 mt-4">J. Vale</p>
             </div>
 
             {/* Fun Facts */}
@@ -155,7 +155,7 @@ export default function AboutPage() {
             <div className="magic-border rounded-xl p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Stay Connected</h2>
               <p className="text-foreground/70 mb-6">
-                Get exclusive updates, behind-the-scenes content, and early access to new chapters.
+                Get exclusive updates, behind the scenes content, and early access to new chapters.
               </p>
               <Link
                 href="/newsletter"

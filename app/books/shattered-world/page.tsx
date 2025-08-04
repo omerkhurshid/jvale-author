@@ -73,7 +73,7 @@ export default function ShatteredWorldPage() {
               <div className="magic-border rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-2">Release Updates</h3>
                 <p className="text-foreground/70 mb-4 text-sm">
-                  Be the first to know when The First Gate is available. Get exclusive previews and behind-the-scenes content.
+                  Be the first to know when The First Gate is available. Get exclusive previews and behind the scenes content.
                 </p>
                 <Link
                   href="/newsletter"
@@ -102,13 +102,13 @@ export default function ShatteredWorldPage() {
                 Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
               </p>
               <p>
-                The scroll awakens something long dormant within Kira—the ability to walk between realms through magical gates that have been sealed since the Sundering, a catastrophic event that fractured the world centuries ago. Accompanied by Lorn, a Guild archivist with his own hidden knowledge, Kira steps through her first gate into lands forgotten by history.
+                The scroll awakens something long dormant within Kira: the ability to walk between realms through magical gates that have been sealed since the Sundering, a catastrophic event that fractured the world centuries ago. Accompanied by Lorn, a Guild archivist with his own hidden knowledge, Kira steps through her first gate into lands forgotten by history.
               </p>
               <p>
-                As they journey through shattered realms and encounter the remnants of a lost civilization, Kira learns she may be the last of the bridgewalkers—legendary figures who once connected the worlds before fear and politics tore them apart. But awakening the gates has consequences, and malevolent forces hunt her across the fractured realms.
+                As they journey through shattered realms and encounter the remnants of a lost civilization, Kira learns she may be the last of the bridgewalkers: legendary figures who once connected the worlds before fear and politics tore them apart. But awakening the gates has consequences, and malevolent forces hunt her across the fractured realms.
               </p>
               <p>
-                With each gate she opens, Kira uncovers more about the truth behind the Sundering and her own mysterious heritage. Now she must decide whether to restore the bridges between worlds—risking the dangers that originally caused their destruction—or let the realms remain forever divided.
+                With each gate she opens, Kira uncovers more about the truth behind the Sundering and her own mysterious heritage. Now she must decide whether to restore the bridges between worlds, risking the dangers that originally caused their destruction, or let the realms remain forever divided.
               </p>
               <p>
                 An epic fantasy adventure about courage, discovery, and the power of connection in a broken world.

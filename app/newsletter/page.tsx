@@ -41,7 +41,7 @@ export default function NewsletterPage() {
             Join the Inner Circle
           </h1>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Get exclusive access to The Veilbound Saga universe, including early chapters, behind-the-scenes content, and special announcements.
+            Get exclusive access to The Veilbound Saga universe, including early chapters, behind the scenes content, and special announcements.
           </p>
         </motion.div>
 
@@ -80,7 +80,7 @@ export default function NewsletterPage() {
             <Mail className="w-8 h-8 text-primary mb-4" />
             <h3 className="text-xl font-bold mb-3">Behind the Scenes</h3>
             <p className="text-foreground/70">
-              Get insights into the writing process, world-building notes, and the inspiration behind your favorite characters.
+              Get insights into the writing process, world building notes, and the inspiration behind your favorite characters.
             </p>
           </div>
         </motion.div>

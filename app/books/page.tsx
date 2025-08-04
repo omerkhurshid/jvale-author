@@ -66,7 +66,7 @@ export default function BooksPage() {
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
-                  When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
+                  When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
                 </p>
                 
                 <Link
@@ -144,7 +144,7 @@ export default function BooksPage() {
           <h2 className="text-3xl font-bold mb-6">About The Veilbound Saga</h2>
           <p className="text-foreground/70 max-w-4xl mx-auto leading-relaxed">
             In a world where magic comes at a price and ancient powers stir beneath the surface, 
-            The Veilbound Saga follows those who bear the mark of moonfire—a blessing and a curse 
+            The Veilbound Saga follows those who bear the mark of moonfire: a blessing and a curse 
             that binds them to forces beyond mortal understanding. As the barriers between realms 
             weaken, these marked individuals must choose between their humanity and the power needed 
             to save everything they hold dear.

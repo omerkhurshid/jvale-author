@@ -94,7 +94,7 @@ export default function Home() {
                   <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
                   <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
-                    When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity—a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
+                    When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
                   </p>
                   <Link
                     href="/books/marked-by-moonfire"
@@ -161,7 +161,7 @@ export default function Home() {
           <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
           <h2 className="text-3xl font-bold mb-4">Join the Inner Circle</h2>
           <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
-            Get exclusive first chapters, behind-the-scenes content, and be the first 
+            Get exclusive first chapters, behind the scenes content, and be the first 
             to know about new releases and special events.
           </p>
           <Link
