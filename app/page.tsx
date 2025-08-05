@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, ShoppingCart } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -132,17 +132,27 @@ export default function Home() {
                 
                 <div className="flex-1 text-center lg:text-left">
                   <h4 className="text-2xl font-bold mb-3">The First Gate</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
+                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
                     When seventeen year old Kira's father vanishes and a mysterious storm appears above her village, she discovers an ancient scroll with a cryptic message: "Find the gate." As the last of the bridgewalkers, she must decide whether to restore the bridges between worlds or let the realms remain forever divided.
                   </p>
-                  <Link
-                    href="/books/shattered-world"
-                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight size={16} />
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://www.amazon.co.uk/dp/B0FL5N4MVK"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      Buy on Amazon
+                      <ShoppingCart size={16} />
+                    </a>
+                    <Link
+                      href="/books/shattered-world"
+                      className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>

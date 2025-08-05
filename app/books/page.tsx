@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Calendar, Star } from 'lucide-react'
+import { ArrowRight, Calendar, Star, ShoppingCart } from 'lucide-react'
 
 export default function BooksPage() {
   return (
@@ -115,20 +115,30 @@ export default function BooksPage() {
                 
                 <div className="flex items-center gap-2 mb-4 text-foreground/60">
                   <Calendar className="w-4 h-4" />
-                  <span>Coming Soon</span>
+                  <span>Available Now</span>
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
                   Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
                 </p>
                 
-                <Link
-                  href="/books/shattered-world"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                >
-                  Learn More
-                  <ArrowRight size={16} />
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.amazon.co.uk/dp/B0FL5N4MVK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                  >
+                    Buy on Amazon
+                    <ShoppingCart size={16} />
+                  </a>
+                  <Link
+                    href="/books/shattered-world"
+                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

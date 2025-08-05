@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star, BookOpen, Bell } from 'lucide-react'
+import { ArrowLeft, Star, BookOpen, ShoppingCart } from 'lucide-react'
 
 export default function ShatteredWorldPage() {
   return (
@@ -68,20 +68,22 @@ export default function ShatteredWorldPage() {
               When a mysterious storm appears above her village and her father vanishes without a trace, Kira discovers an ancient scroll bearing a cryptic message: "Find the gate."
             </p>
 
-            {/* Coming Soon Actions */}
+            {/* Buy Now Actions */}
             <div className="space-y-4">
               <div className="magic-border rounded-xl p-6">
-                <h3 className="text-lg font-semibold mb-2">Release Updates</h3>
+                <h3 className="text-lg font-semibold mb-2">Available Now</h3>
                 <p className="text-foreground/70 mb-4 text-sm">
-                  Be the first to know when The First Gate is available. Get exclusive previews and behind the scenes content.
+                  The First Gate is now available! Begin your journey through the shattered realms.
                 </p>
-                <Link
-                  href="/newsletter"
+                <a
+                  href="https://www.amazon.co.uk/dp/B0FL5N4MVK"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors w-full justify-center"
                 >
-                  <Bell size={16} />
-                  Get Notified
-                </Link>
+                  <ShoppingCart size={16} />
+                  Buy on Amazon
+                </a>
               </div>
             </div>
           </motion.div>
@@ -96,7 +98,7 @@ export default function ShatteredWorldPage() {
         >
           {/* Synopsis */}
           <div className="lg:col-span-2 space-y-6">
-            <h2 className="text-3xl font-bold mb-6">What's Coming</h2>
+            <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
                 Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
