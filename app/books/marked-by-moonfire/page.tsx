@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star } from 'lucide-react'
+import { ArrowLeft, Star, ShoppingCart } from 'lucide-react'
 
 export default function MarkedByMoonfirePage() {
 
@@ -68,6 +68,22 @@ export default function MarkedByMoonfirePage() {
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
               When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic.
             </p>
+
+            {/* Buy Button */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://www.amazon.co.uk/dp/B0FL7T82CN"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Buy on Amazon
+                <ShoppingCart size={20} />
+              </a>
+              <span className="text-primary font-semibold text-lg self-center">
+                Available Now
+              </span>
+            </div>
 
           </motion.div>
         </div>

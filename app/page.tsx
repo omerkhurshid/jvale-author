@@ -92,17 +92,27 @@ export default function Home() {
                 
                 <div className="flex-1 text-center lg:text-left">
                   <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
+                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
                     When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
                   </p>
-                  <Link
-                    href="/books/marked-by-moonfire"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                  >
-                    Read More
-                    <ArrowRight size={16} />
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://www.amazon.co.uk/dp/B0FL7T82CN"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      Buy on Amazon
+                      <ShoppingCart size={16} />
+                    </a>
+                    <Link
+                      href="/books/marked-by-moonfire"
+                      className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>
