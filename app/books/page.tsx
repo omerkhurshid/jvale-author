@@ -192,7 +192,7 @@ export default function BooksPage() {
                 </div>
                 
                 <p className="text-foreground/70 mb-6 leading-relaxed">
-                  When fifteen year old Theo Ashbourne receives his acceptance letter to Rivenfall Academy, he thinks his biggest challenge will be keeping up with the magical curriculum. But the prestigious school harbors secrets darker than the shadows that creep through its ancient halls.
+                  Rowan Ashbourne never expected his life to amount to more than grinding grain in Hollowmere. But when a wounded rook leads him to a glowing rune, he discovers a secret that will tear him from the world he thought he knew. Summoned to Rivenfall Academy, a castle suspended above the trees by colossal silver chains, Rowan must uncover the truth behind the chains that bind them all.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3">

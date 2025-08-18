@@ -65,7 +65,7 @@ export default function RivenfallAcademyPage() {
 
 
             <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              At Rivenfall Academy, where magic and mystery intertwine, some secrets are bound by chains stronger than any spell.
+              A school that floats above the forest. Chains that hold more than stone. A boy whose gift may unbind them all.
             </p>
 
             {/* Coming Soon Actions */}
@@ -99,19 +99,19 @@ export default function RivenfallAcademyPage() {
             <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
             <div className="space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                When fifteen year old Theo Ashbourne receives his acceptance letter to Rivenfall Academy, he thinks his biggest challenge will be keeping up with the magical curriculum. But the prestigious school harbors secrets darker than the shadows that creep through its ancient halls.
+                Rowan Ashbourne never expected his life to amount to more than grinding grain in the sleepy village of Hollowmere. But when a wounded rook leads him to a glowing rune, and the Festival of Lanterns ignites with impossible light, Rowan discovers a secret that will tear him from the world he thought he knew.
               </p>
               <p>
-                Students whisper of the Chains: mysterious, invisible bonds that appear between certain individuals, linking their fates in ways no one fully understands. Some say the Chains grant immense power to those who master them. Others claim they're a curse that has plagued the academy for centuries.
+                Summoned to Rivenfall Academy — a castle suspended above the trees by colossal silver chains — Rowan steps into a hidden world of rune-magic, spectral founders, and dangerous rivalries. But as he struggles to master his strange new powers, whispers stir in the shadows: the chains that hold the Academy are weakening… and so are the bonds that protect the realm itself.
               </p>
               <p>
-                As Theo navigates friendships, rivalries, and his growing magical abilities, he discovers he's at the center of an ancient mystery. The Chains that bind him to others may be the key to saving Rivenfall, or they could be the very thing that destroys it.
+                Now Rowan must choose: bind himself to the Academy's ancient laws, or risk everything to uncover the truth behind the chains that bind them all.
               </p>
-              <p>
-                With each spell learned and each secret uncovered, Theo must decide who to trust in a school where everyone has their own agenda and the price of power might be higher than anyone imagined.
+              <p className="italic mt-6">
+                "Some chains protect as much as they confine — but even the strongest can be broken."
               </p>
-              <p>
-                A gripping academy fantasy where magic comes with a cost and every choice echoes through the chains of fate.
+              <p className="mt-6">
+                Perfect for fans of J.K. Rowling's Harry Potter, Leigh Bardugo's Shadow and Bone, and Naomi Novik's A Deadly Education, Rivenfall Academy: The Chains That Bind launches an unforgettable new fantasy series full of wonder, danger, and destiny.
               </p>
             </div>
           </div>

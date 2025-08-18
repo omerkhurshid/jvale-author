@@ -194,7 +194,7 @@ export default function Home() {
                   <h4 className="text-2xl font-bold mb-3">The Chains That Bind</h4>
                   <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
                   <p className="text-foreground/70 mb-6 leading-relaxed">
-                    When fifteen year old Theo Ashbourne receives his acceptance letter to Rivenfall Academy, he discovers the prestigious school harbors secrets darker than the shadows that creep through its ancient halls. The mysterious Chains that bind certain students may be the key to saving Rivenfall, or the very thing that destroys it.
+                    When Rowan Ashbourne discovers a glowing rune in his village, he's summoned to Rivenfall Academy, a castle suspended above the trees by colossal silver chains. As he masters his strange new powers, he learns the chains are weakening, and with them, the bonds that protect the realm itself.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
