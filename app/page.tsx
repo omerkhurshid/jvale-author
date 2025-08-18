@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Sparkles, ShoppingCart } from 'lucide-react'
+import { ArrowRight, Sparkles, ShoppingCart, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -23,13 +23,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="hero-title mb-6">
-              <span className="text-gradient glow">Two Epic</span>
+              <span className="text-gradient glow">Three Epic</span>
               <br />
               <span className="text-foreground/80 hero-subtitle">Fantasy Series</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground/70 mb-8 max-w-3xl mx-auto">
-              Enter two distinct worlds of magic, mystery, and adventure
+              Enter three distinct worlds of magic, mystery, and adventure
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -65,7 +65,7 @@ export default function Home() {
             Featured Series
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Book 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -158,6 +158,54 @@ export default function Home() {
                     </a>
                     <Link
                       href="/books/shattered-world"
+                      className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Book 3 - Rivenfall Academy */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="elegant-card rounded-3xl p-8"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-2 text-gradient">Rivenfall Academy</h3>
+                <p className="text-foreground/60">Where secrets bind stronger than spells</p>
+              </div>
+              
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="book-cover-glow">
+                  <Image
+                    src="/images/rivenfall-academy-cover.jpg"
+                    alt="The Chains That Bind book cover"
+                    width={280}
+                    height={420}
+                    className="rounded-xl shadow-2xl"
+                  />
+                </div>
+                
+                <div className="flex-1 text-center lg:text-left">
+                  <h4 className="text-2xl font-bold mb-3">The Chains That Bind</h4>
+                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                    When fifteen year old Theo Ashbourne receives his acceptance letter to Rivenfall Academy, he discovers the prestigious school harbors secrets darker than the shadows that creep through its ancient halls. The mysterious Chains that bind certain students may be the key to saving Rivenfall, or the very thing that destroys it.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      Request ARC
+                      <Mail size={16} />
+                    </Link>
+                    <Link
+                      href="/books/rivenfall-academy"
                       className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
                     >
                       Learn More

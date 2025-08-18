@@ -20,7 +20,7 @@ export default function BooksPage() {
             Fantasy Series
           </h1>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Two distinct worlds of magic and adventure, each with their own mysteries to uncover.
+            Three distinct worlds of magic and adventure, each with their own mysteries to uncover.
           </p>
         </motion.div>
 
@@ -144,6 +144,67 @@ export default function BooksPage() {
                   </a>
                   <Link
                     href="/books/shattered-world"
+                    className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Book 3 - Rivenfall Academy */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="elegant-card rounded-3xl p-10"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold mb-3 text-gradient">Rivenfall Academy</h2>
+              <p className="text-foreground/60 text-lg">Where secrets bind stronger than spells</p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex-shrink-0">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
+                  <Image
+                    src="/images/rivenfall-academy-cover.jpg"
+                    alt="The Chains That Bind book cover"
+                    width={200}
+                    height={300}
+                    className="relative rounded-lg shadow-2xl mx-auto"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <Star className="w-5 h-5 text-primary" />
+                  <span className="text-primary font-semibold">Book One</span>
+                </div>
+                
+                <h2 className="text-3xl font-bold mb-4">The Chains That Bind</h2>
+                
+                <div className="flex items-center gap-2 mb-4 text-foreground/60">
+                  <Calendar className="w-4 h-4" />
+                  <span>Coming Soon</span>
+                </div>
+                
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  When fifteen year old Theo Ashbourne receives his acceptance letter to Rivenfall Academy, he thinks his biggest challenge will be keeping up with the magical curriculum. But the prestigious school harbors secrets darker than the shadows that creep through its ancient halls.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                  >
+                    Request ARC Access
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link
+                    href="/books/rivenfall-academy"
                     className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
                   >
                     Learn More
