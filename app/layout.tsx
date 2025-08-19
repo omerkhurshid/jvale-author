@@ -78,6 +78,29 @@ export default function RootLayout({
         <main className="pt-16">
           {children}
         </main>
+        <footer className="border-t border-border/20 bg-background/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="text-foreground/60 text-sm mb-4 md:mb-0">
+                © {new Date().getFullYear()} J. Vale. All rights reserved.
+              </div>
+              <div className="flex items-center gap-6 text-sm">
+                <a
+                  href="/privacy"
+                  className="text-foreground/60 hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="/contact"
+                  className="text-foreground/60 hover:text-primary transition-colors"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   )
