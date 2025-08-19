@@ -93,7 +93,6 @@ export default function ShatteredWorldPage() {
               The First Gate
             </h1>
 
-
             <p className="text-xl text-gray-200/90 mb-8 leading-relaxed">
               When a mysterious storm appears above her village and her father vanishes without a trace, Kira discovers an ancient scroll bearing a cryptic message: "Find the gate."
             </p>
@@ -131,37 +130,33 @@ export default function ShatteredWorldPage() {
         >
           {/* Synopsis */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-gradient-to-br from-slate-800/80 via-gray-800/60 to-zinc-800/80 backdrop-blur-xl border border-gray-500/20 rounded-2xl p-8 md:p-12 shadow-2xl"
-        >
-          {/* Synopsis */}
-          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-gradient-to-br from-slate-800/80 via-gray-800/60 to-zinc-800/80 backdrop-blur-xl border border-gray-500/20 rounded-2xl p-8 md:p-12 shadow-2xl">
               <h2 className="text-3xl font-bold mb-6 text-white flex items-center gap-3">
                 <Zap className="text-gray-400" size={28} />
                 Synopsis
               </h2>
               <div className="space-y-4 text-gray-100/90 leading-relaxed text-lg">
-              <p>
-                Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
-              </p>
-              <p>
-                The scroll awakens something long dormant within Kira: the ability to walk between realms through magical gates that have been sealed since the Sundering, a catastrophic event that fractured the world centuries ago. Accompanied by Lorn, a Guild archivist with his own hidden knowledge, Kira steps through her first gate into lands forgotten by history.
-              </p>
-              <p>
-                As they journey through shattered realms and encounter the remnants of a lost civilization, Kira learns she may be the last of the bridgewalkers: legendary figures who once connected the worlds before fear and politics tore them apart. But awakening the gates has consequences, and malevolent forces hunt her across the fractured realms.
-              </p>
-              <p>
-                With each gate she opens, Kira uncovers more about the truth behind the Sundering and her own mysterious heritage. Now she must decide whether to restore the bridges between worlds, risking the dangers that originally caused their destruction, or let the realms remain forever divided.
-              </p>
-              <p>
-                An epic fantasy adventure about courage, discovery, and the power of connection in a broken world.
-              </p>
+                <p>
+                  Seventeen year old Kira has always known the sky whispers warnings to those who listen. When a mysterious storm appears above her village and her father vanishes without a trace, she discovers an ancient scroll bearing a cryptic message: "Find the gate."
+                </p>
+                <p>
+                  The scroll awakens something long dormant within Kira: the ability to walk between realms through magical gates that have been sealed since the Sundering, a catastrophic event that fractured the world centuries ago. Accompanied by Lorn, a Guild archivist with his own hidden knowledge, Kira steps through her first gate into lands forgotten by history.
+                </p>
+                <p>
+                  As they journey through shattered realms and encounter the remnants of a lost civilization, Kira learns she may be the last of the bridgewalkers: legendary figures who once connected the worlds before fear and politics tore them apart. But awakening the gates has consequences, and malevolent forces hunt her across the fractured realms.
+                </p>
+                <p>
+                  With each gate she opens, Kira uncovers more about the truth behind the Sundering and her own mysterious heritage. Now she must decide whether to restore the bridges between worlds, risking the dangers that originally caused their destruction, or let the realms remain forever divided.
+                </p>
+                <p>
+                  An epic fantasy adventure about courage, discovery, and the power of connection in a broken world.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
-
             {/* Other Series */}
             <div className="bg-gradient-to-br from-gray-700/40 to-zinc-700/40 border border-gray-400/30 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-4 text-white flex items-center gap-2">
@@ -179,7 +174,6 @@ export default function ShatteredWorldPage() {
                 The Veilbound Saga
               </Link>
             </div>
-
           </div>
         </motion.div>
       </div>

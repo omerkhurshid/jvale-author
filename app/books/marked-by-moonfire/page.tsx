@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { ArrowLeft, Star, ShoppingCart, Flame, Moon } from 'lucide-react'
 
 export default function MarkedByMoonfirePage() {
-
   return (
     <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-slate-900 via-red-950 to-orange-950 relative overflow-hidden">
       {/* Magical Background Effects */}
@@ -85,7 +84,6 @@ export default function MarkedByMoonfirePage() {
               Marked by Moonfire
             </h1>
 
-
             <p className="text-xl text-red-100/90 mb-8 leading-relaxed">
               When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic.
             </p>
@@ -106,7 +104,6 @@ export default function MarkedByMoonfirePage() {
                 Available Now
               </span>
             </div>
-
           </motion.div>
         </div>
 
@@ -119,34 +116,30 @@ export default function MarkedByMoonfirePage() {
         >
           {/* Synopsis */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-gradient-to-br from-slate-800/80 via-red-900/60 to-orange-900/80 backdrop-blur-xl border border-red-400/20 rounded-2xl p-8 md:p-12 shadow-2xl"
-        >
-          {/* Synopsis */}
-          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-gradient-to-br from-slate-800/80 via-red-900/60 to-orange-900/80 backdrop-blur-xl border border-red-400/20 rounded-2xl p-8 md:p-12 shadow-2xl">
               <h2 className="text-3xl font-bold mb-6 text-white flex items-center gap-3">
                 <Flame className="text-orange-400" size={28} />
                 Synopsis
               </h2>
               <div className="space-y-4 text-red-50/90 leading-relaxed text-lg">
-              <p>
-                When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
-              </p>
-              <p>
-                Enter Kael, a battle hardened General of the Nightshade Court, who recognizes Asha's mark for what it truly is: an Eldermark, binding her to a prophecy that could either heal the fractured realms or destroy them entirely. As their fates become intertwined through an unbreakable soul bond, Asha must navigate dangerous court politics, mysterious powers awakening within her, and a growing connection to Kael that defies explanation.
-              </p>
-              <p>
-                But the mark has awakened more than just magic: it has drawn the attention of those who would use Asha's power for their own ends. With enemies closing in and the Veil between worlds growing unstable, Asha faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
-              </p>
-              <p>
-                A sweeping fantasy romance that weaves together magic, destiny, and the power of choosing love over fate.
-              </p>
+                <p>
+                  When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
+                </p>
+                <p>
+                  Enter Kael, a battle hardened General of the Nightshade Court, who recognizes Asha's mark for what it truly is: an Eldermark, binding her to a prophecy that could either heal the fractured realms or destroy them entirely. As their fates become intertwined through an unbreakable soul bond, Asha must navigate dangerous court politics, mysterious powers awakening within her, and a growing connection to Kael that defies explanation.
+                </p>
+                <p>
+                  But the mark has awakened more than just magic: it has drawn the attention of those who would use Asha's power for their own ends. With enemies closing in and the Veil between worlds growing unstable, Asha faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
+                </p>
+                <p>
+                  A sweeping fantasy romance that weaves together magic, destiny, and the power of choosing love over fate.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
-
             {/* Newsletter */}
             <div className="bg-gradient-to-br from-red-700/40 to-orange-700/40 border border-red-400/30 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-4 text-white flex items-center gap-2">
