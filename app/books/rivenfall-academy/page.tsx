@@ -161,13 +161,13 @@ export default function RivenfallAcademyPage() {
               <p className="text-purple-100/80 mb-4">
                 Dive into Rowan's world and experience the magic of Rivenfall Academy from the very first page.
               </p>
-              <button
-                onClick={() => window.open('/downloads/Rivenfall Academy - Sample Pages.pdf', '_blank')}
+              <Link
+                href="/books/rivenfall-academy/sample"
                 className="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-purple-500 transition-colors w-full justify-center"
               >
                 <BookOpen size={16} />
                 Read Sample Pages
-              </button>
+              </Link>
             </div>
 
             {/* Newsletter */}
