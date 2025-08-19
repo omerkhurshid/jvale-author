@@ -205,7 +205,7 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href="https://www.amazon.co.uk/dp/B0DQ8JSFS1"
+                      href="https://a.co/d/85bMEWr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/25"

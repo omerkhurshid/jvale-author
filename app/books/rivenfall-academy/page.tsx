@@ -80,27 +80,17 @@ export default function RivenfallAcademyPage() {
                 <h3 className="text-2xl font-bold text-white">Special Launch Promo!</h3>
               </div>
               <p className="text-blue-100 mb-4 text-lg">
-                Get <strong>The Chains That Bind</strong> for just <span className="text-yellow-300 font-bold text-xl">$0.99</span> today! 
-                Also available <strong>FREE</strong> on Kindle Unlimited.
+                Get <strong>The Chains That Bind</strong> for just <span className="text-yellow-300 font-bold text-xl">$0.99</span> today!
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex justify-center">
                 <a
-                  href="https://www.amazon.co.uk/dp/B0DQ8JSFS1"
+                  href="https://a.co/d/85bMEWr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors text-lg shadow-lg"
                 >
                   <ShoppingCart size={20} />
                   Buy Now for $0.99
-                </a>
-                <a
-                  href="https://www.amazon.co.uk/kindle-dbs/hz/signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-                >
-                  <BookOpen size={20} />
-                  Read FREE on KU
                 </a>
               </div>
             </div>
@@ -172,7 +162,7 @@ export default function RivenfallAcademyPage() {
                 Dive into Rowan's world and experience the magic of Rivenfall Academy from the very first page.
               </p>
               <button
-                onClick={() => window.open('/downloads/Rivenfall Academy - The Chains that Bind.pdf', '_blank')}
+                onClick={() => window.open('/downloads/Rivenfall Academy - Sample Pages.pdf', '_blank')}
                 className="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-purple-500 transition-colors w-full justify-center"
               >
                 <BookOpen size={16} />
