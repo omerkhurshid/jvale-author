@@ -3,13 +3,28 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star, ShoppingCart } from 'lucide-react'
+import { ArrowLeft, Star, ShoppingCart, Flame, Moon } from 'lucide-react'
 
 export default function MarkedByMoonfirePage() {
 
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-slate-900 via-red-950 to-orange-950 relative overflow-hidden">
+      {/* Magical Background Effects */}
+      <div className="fixed inset-0 pointer-events-none">
+        {/* Floating Fire Embers */}
+        <div className="fire-ember" style={{bottom: '10%', left: '10%'}}></div>
+        <div className="fire-ember" style={{bottom: '20%', right: '20%'}}></div>
+        <div className="fire-ember" style={{bottom: '15%', left: '50%'}}></div>
+        <div className="fire-ember" style={{bottom: '5%', right: '10%'}}></div>
+        <div className="fire-ember" style={{bottom: '25%', left: '30%'}}></div>
+        
+        {/* Moonfire Glow */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-red-400/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -19,7 +34,7 @@ export default function MarkedByMoonfirePage() {
         >
           <Link
             href="/books"
-            className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
+            className="inline-flex items-center gap-2 text-red-200/80 hover:text-red-300 transition-colors"
           >
             <ArrowLeft size={20} />
             Back to Books
@@ -36,15 +51,20 @@ export default function MarkedByMoonfirePage() {
             className="flex justify-center lg:justify-start"
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-primary/30 blur-2xl group-hover:bg-primary/40 transition-colors" />
+              <div className="absolute inset-0 bg-red-500/40 blur-3xl group-hover:bg-red-400/50 transition-colors" />
+              <div className="absolute inset-0 bg-orange-500/20 blur-2xl group-hover:bg-orange-400/30 transition-colors animate-pulse" />
               <Image
                 src="/images/marked-by-moonfire-cover.jpg"
                 alt="Marked by Moonfire book cover"
                 width={400}
                 height={600}
-                className="relative rounded-lg shadow-2xl"
+                className="relative rounded-lg shadow-2xl border border-red-400/30"
                 priority
               />
+              {/* Moonfire sparkles around the book */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-8 left-4 w-1 h-1 bg-orange-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute top-1/2 left-0 w-1.5 h-1.5 bg-red-300 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
             </div>
           </motion.div>
 
@@ -56,16 +76,17 @@ export default function MarkedByMoonfirePage() {
             className="flex flex-col justify-center"
           >
             <div className="flex items-center gap-2 mb-4">
-              <Star className="w-6 h-6 text-primary" />
-              <span className="text-primary font-semibold text-lg">The Veilbound Saga • Book One</span>
+              <Moon className="w-6 h-6 text-red-300" />
+              <span className="text-red-300 font-semibold text-lg">The Veilbound Saga • Book One</span>
+              <Flame className="w-6 h-6 text-orange-300" />
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient glow">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 moonfire-title">
               Marked by Moonfire
             </h1>
 
 
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
+            <p className="text-xl text-red-100/90 mb-8 leading-relaxed">
               When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic.
             </p>
 
@@ -75,12 +96,13 @@ export default function MarkedByMoonfirePage() {
                 href="https://www.amazon.co.uk/dp/B0FL7T82CN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-500 hover:to-orange-500 transition-colors shadow-lg shadow-red-600/25"
               >
                 Buy on Amazon
                 <ShoppingCart size={20} />
               </a>
-              <span className="text-primary font-semibold text-lg self-center">
+              <span className="text-red-300 font-semibold text-lg self-center flex items-center gap-2">
+                <Star className="w-5 h-5 fill-red-300" />
                 Available Now
               </span>
             </div>
@@ -97,8 +119,15 @@ export default function MarkedByMoonfirePage() {
         >
           {/* Synopsis */}
           <div className="lg:col-span-2 space-y-6">
-            <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
-            <div className="space-y-4 text-foreground/80 leading-relaxed">
+            <div className="bg-gradient-to-br from-slate-800/80 via-red-900/60 to-orange-900/80 backdrop-blur-xl border border-red-400/20 rounded-2xl p-8 md:p-12 shadow-2xl"
+        >
+          {/* Synopsis */}
+          <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-3xl font-bold mb-6 text-white flex items-center gap-3">
+                <Flame className="text-orange-400" size={28} />
+                Synopsis
+              </h2>
+              <div className="space-y-4 text-red-50/90 leading-relaxed text-lg">
               <p>
                 When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark beneath her collarbone that pulses with ancient magic. As she struggles to piece together fragments of her forgotten life, she discovers she's been chosen by forces beyond her understanding.
               </p>
@@ -111,6 +140,7 @@ export default function MarkedByMoonfirePage() {
               <p>
                 A sweeping fantasy romance that weaves together magic, destiny, and the power of choosing love over fate.
               </p>
+              </div>
             </div>
           </div>
 
@@ -118,14 +148,17 @@ export default function MarkedByMoonfirePage() {
           <div className="space-y-8">
 
             {/* Newsletter */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Stay Updated</h3>
-              <p className="text-foreground/70 mb-4">
+            <div className="bg-gradient-to-br from-red-700/40 to-orange-700/40 border border-red-400/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 text-white flex items-center gap-2">
+                <Moon className="text-red-300" size={20} />
+                Stay Updated
+              </h3>
+              <p className="text-red-100/80 mb-4">
                 Get notified about the next book in the series and exclusive content.
               </p>
               <Link
                 href="/newsletter"
-                className="inline-flex items-center gap-2 bg-secondary text-foreground px-4 py-2 rounded-lg font-semibold hover:bg-secondary/80 transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-red-500 transition-colors w-full justify-center"
               >
                 Join Newsletter
               </Link>

@@ -66,20 +66,25 @@ export default function Home() {
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Book 1 */}
+            {/* Book 1 - Marked by Moonfire with Ashen Red Theme */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="elegant-card rounded-3xl p-8 mb-12"
+              className="moonfire-card rounded-3xl p-8 mb-12 relative"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-2 text-gradient">The Veilbound Saga</h3>
-                <p className="text-foreground/60">A world where magic demands sacrifice</p>
+              {/* Fire embers */}
+              <div className="fire-ember" style={{bottom: '20px', left: '30px'}}></div>
+              <div className="fire-ember" style={{bottom: '60px', right: '40px'}}></div>
+              <div className="fire-ember" style={{bottom: '40px', left: '50%'}}></div>
+              <div className="text-center mb-8 relative z-10">
+                <h3 className="text-3xl font-bold mb-2 moonfire-title">The Veilbound Saga</h3>
+                <p className="text-red-200/80">A world where magic demands sacrifice</p>
               </div>
               
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="book-cover-glow">
+              <div className="flex flex-col lg:flex-row gap-8 items-center relative z-10">
+                <div className="book-cover-glow relative">
+                  <div className="absolute inset-0 bg-red-500/20 blur-2xl rounded-xl"></div>
                   <Image
                     src="/images/marked-by-moonfire-cover.jpg"
                     alt="Marked by Moonfire book cover"
@@ -91,9 +96,9 @@ export default function Home() {
                 </div>
                 
                 <div className="flex-1 text-center lg:text-left">
-                  <h4 className="text-2xl font-bold mb-3">Marked by Moonfire</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
-                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                  <h4 className="text-2xl font-bold mb-3 text-white">Marked by Moonfire</h4>
+                  <p className="text-red-300 font-semibold mb-4">Book One • Available Now</p>
+                  <p className="text-red-100/80 mb-6 leading-relaxed">
                     When Asha awakens in a mysterious forest with no memory of her past, she bears only one clue to her identity: a glowing silver mark that pulses with ancient magic. Chosen by forces beyond her understanding and bound by prophecy, she faces an impossible choice: embrace her destiny as the Guardian the realms need, or fight to remain the woman she chooses to be.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -117,20 +122,25 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Book 2 */}
+            {/* Book 2 - Shattered World with Grey Theme */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="elegant-card rounded-3xl p-8"
+              className="shattered-card rounded-3xl p-8 relative"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-2 text-gradient">Shattered World</h3>
-                <p className="text-foreground/60">A realm where reality fractures</p>
+              {/* Falling shards */}
+              <div className="shard-fragment" style={{top: '0', left: '20%'}}></div>
+              <div className="shard-fragment" style={{top: '0', right: '30%'}}></div>
+              <div className="shard-fragment" style={{top: '0', left: '60%'}}></div>
+              <div className="text-center mb-8 relative z-10">
+                <h3 className="text-3xl font-bold mb-2 shattered-title">Shattered World</h3>
+                <p className="text-gray-300/80">A realm where reality fractures</p>
               </div>
               
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="book-cover-glow">
+              <div className="flex flex-col lg:flex-row gap-8 items-center relative z-10">
+                <div className="book-cover-glow relative">
+                  <div className="absolute inset-0 bg-gray-500/20 blur-2xl rounded-xl"></div>
                   <Image
                     src="/images/shattered-world-cover.jpg"
                     alt="The First Gate book cover"
@@ -141,9 +151,9 @@ export default function Home() {
                 </div>
                 
                 <div className="flex-1 text-center lg:text-left">
-                  <h4 className="text-2xl font-bold mb-3">The First Gate</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Available Now</p>
-                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                  <h4 className="text-2xl font-bold mb-3 text-white">The First Gate</h4>
+                  <p className="text-gray-300 font-semibold mb-4">Book One • Available Now</p>
+                  <p className="text-gray-200/80 mb-6 leading-relaxed">
                     When seventeen year old Kira's father vanishes and a mysterious storm appears above her village, she discovers an ancient scroll with a cryptic message: "Find the gate." As the last of the bridgewalkers, she must decide whether to restore the bridges between worlds or let the realms remain forever divided.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
