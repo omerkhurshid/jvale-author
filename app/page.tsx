@@ -182,7 +182,7 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row gap-8 items-center">
                 <div className="book-cover-glow">
                   <Image
-                    src="/images/rivenfall-academy-cover.jpg"
+                    src="/images/rivenfall-academy-chains-cover.jpg"
                     alt="The Chains That Bind book cover"
                     width={280}
                     height={420}

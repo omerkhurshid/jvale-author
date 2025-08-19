@@ -169,7 +169,7 @@ export default function BooksPage() {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors" />
                   <Image
-                    src="/images/rivenfall-academy-cover.jpg"
+                    src="/images/rivenfall-academy-chains-cover.jpg"
                     alt="The Chains That Bind book cover"
                     width={200}
                     height={300}

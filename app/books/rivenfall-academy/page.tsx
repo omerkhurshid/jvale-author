@@ -37,7 +37,7 @@ export default function RivenfallAcademyPage() {
             <div className="relative group">
               <div className="absolute inset-0 bg-primary/30 blur-2xl group-hover:bg-primary/40 transition-colors" />
               <Image
-                src="/images/rivenfall-academy-cover.jpg"
+                src="/images/rivenfall-academy-chains-cover.jpg"
                 alt="The Chains That Bind book cover"
                 width={400}
                 height={600}
