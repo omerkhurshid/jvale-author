@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Star, BookOpen, Mail } from 'lucide-react'
+import { ArrowLeft, Star, BookOpen, Mail, ShoppingCart, Sparkles } from 'lucide-react'
 
 export default function RivenfallAcademyPage() {
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="max-w-7xl mx-auto">
         {/* Back Button */}
         <motion.div
@@ -35,15 +35,20 @@ export default function RivenfallAcademyPage() {
             className="flex justify-center lg:justify-start"
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-primary/30 blur-2xl group-hover:bg-primary/40 transition-colors" />
+              <div className="absolute inset-0 bg-blue-500/40 blur-3xl group-hover:bg-blue-400/50 transition-colors" />
+              <div className="absolute inset-0 bg-purple-500/20 blur-2xl group-hover:bg-purple-400/30 transition-colors animate-pulse" />
               <Image
                 src="/images/rivenfall-academy-chains-cover.jpg"
                 alt="The Chains That Bind book cover"
                 width={400}
                 height={600}
-                className="relative rounded-lg shadow-2xl"
+                className="relative rounded-lg shadow-2xl border border-blue-400/30"
                 priority
               />
+              {/* Magical sparkles around the book */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-8 left-4 w-1 h-1 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute top-1/2 left-0 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
             </div>
           </motion.div>
 
@@ -59,33 +64,78 @@ export default function RivenfallAcademyPage() {
               <span className="text-primary font-semibold text-lg">Rivenfall Academy • Book One</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gradient glow">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 rivenfall-title">
               The Chains That Bind
             </h1>
 
+            {/* Book Quote */}
+            <blockquote className="text-2xl italic text-blue-100/90 mb-8 border-l-4 border-blue-400 pl-6 leading-relaxed">
+              "Some chains protect as much as they confine — but even the strongest can be broken."
+            </blockquote>
 
-            <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
-              A school that floats above the forest. Chains that hold more than stone. A boy whose gift may unbind them all.
-            </p>
-
-            {/* Coming Soon Actions */}
-            <div className="space-y-4">
-              <div className="magic-border rounded-xl p-6">
-                <h3 className="text-lg font-semibold mb-2">Coming Soon</h3>
-                <p className="text-foreground/70 mb-4 text-sm">
-                  Be among the first to enter the halls of Rivenfall Academy. Sign up to be an early reader and receive an Advanced Reader Copy (ARC).
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors w-full justify-center"
+            {/* Amazon Purchase Section */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 shadow-xl">
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles className="text-yellow-300" size={24} />
+                <h3 className="text-2xl font-bold text-white">Special Launch Promo!</h3>
+              </div>
+              <p className="text-blue-100 mb-4 text-lg">
+                Get <strong>The Chains That Bind</strong> for just <span className="text-yellow-300 font-bold text-xl">$0.99</span> today! 
+                Also available <strong>FREE</strong> on Kindle Unlimited.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://www.amazon.co.uk/dp/B0DQ8JSFS1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors text-lg shadow-lg"
                 >
-                  <Mail size={16} />
-                  Request ARC Access
-                </Link>
+                  <ShoppingCart size={20} />
+                  Buy Now for $0.99
+                </a>
+                <a
+                  href="https://www.amazon.co.uk/kindle-dbs/hz/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                >
+                  <BookOpen size={20} />
+                  Read FREE on KU
+                </a>
               </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Reader Hooks Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">Perfect For Readers Who Love...</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-blue-800/30 rounded-lg p-6 border border-blue-400/30">
+              <h3 className="text-xl font-bold text-blue-200 mb-3">🧙‍♂️ Young Adult Fantasy</h3>
+              <p className="text-blue-100/80">
+                Magic schools, coming-of-age journeys, and discovering hidden powers. Perfect for fans of Harry Potter and Percy Jackson.
+              </p>
+            </div>
+            <div className="bg-purple-800/30 rounded-lg p-6 border border-purple-400/30">
+              <h3 className="text-xl font-bold text-purple-200 mb-3">📚 Parent & Teen Reading</h3>
+              <p className="text-purple-100/80">
+                A captivating story that bridges generations. Moms and kids can share the adventure together.
+              </p>
+            </div>
+            <div className="bg-indigo-800/30 rounded-lg p-6 border border-indigo-400/30">
+              <h3 className="text-xl font-bold text-indigo-200 mb-3">⚔️ Epic Fantasy Adventures</h3>
+              <p className="text-indigo-100/80">
+                Rich world-building, mysterious academies, and ancient magic systems that will keep you turning pages.
+              </p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Book Description */}
         <motion.div
@@ -96,8 +146,8 @@ export default function RivenfallAcademyPage() {
         >
           {/* Synopsis */}
           <div className="lg:col-span-2 space-y-6">
-            <h2 className="text-3xl font-bold mb-6">Synopsis</h2>
-            <div className="space-y-4 text-foreground/80 leading-relaxed">
+            <h2 className="text-3xl font-bold mb-6 text-white">Synopsis</h2>
+            <div className="space-y-4 text-blue-100/90 leading-relaxed text-lg">
               <p>
                 Rowan Ashbourne never expected his life to amount to more than grinding grain in the sleepy village of Hollowmere. But when a wounded rook leads him to a glowing rune, and the Festival of Lanterns ignites with impossible light, Rowan discovers a secret that will tear him from the world he thought he knew.
               </p>
@@ -107,10 +157,7 @@ export default function RivenfallAcademyPage() {
               <p>
                 Now Rowan must choose: bind himself to the Academy's ancient laws, or risk everything to uncover the truth behind the chains that bind them all.
               </p>
-              <p className="italic mt-6">
-                "Some chains protect as much as they confine — but even the strongest can be broken."
-              </p>
-              <p className="mt-6">
+              <p className="mt-6 text-blue-200">
                 Perfect for fans of J.K. Rowling's Harry Potter, Leigh Bardugo's Shadow and Bone, and Naomi Novik's A Deadly Education, Rivenfall Academy: The Chains That Bind launches an unforgettable new fantasy series full of wonder, danger, and destiny.
               </p>
             </div>
@@ -118,31 +165,32 @@ export default function RivenfallAcademyPage() {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Early Access */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Get Early Access</h3>
-              <p className="text-foreground/70 mb-4">
-                Join our ARC team and be one of the first to read The Chains That Bind.
+            {/* Read First Chapter */}
+            <div className="bg-gradient-to-br from-purple-700/40 to-blue-700/40 border border-purple-400/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 text-white">📖 Read the First Chapter</h3>
+              <p className="text-purple-100/80 mb-4">
+                Dive into Rowan's world and experience the magic of Rivenfall Academy from the very first page.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-secondary text-foreground px-4 py-2 rounded-lg font-semibold hover:bg-secondary/80 transition-colors w-full justify-center"
+              <button
+                onClick={() => window.open('/downloads/Rivenfall Academy - The Chains that Bind.pdf', '_blank')}
+                className="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-purple-500 transition-colors w-full justify-center"
               >
                 <BookOpen size={16} />
-                Apply for ARC
-              </Link>
+                Read Sample Pages
+              </button>
             </div>
 
             {/* Newsletter */}
-            <div className="magic-border rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4">Stay Updated</h3>
-              <p className="text-foreground/70 mb-4">
-                Get notified when The Chains That Bind releases and receive exclusive content.
+            <div className="bg-gradient-to-br from-blue-700/40 to-indigo-700/40 border border-blue-400/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 text-white">📬 Stay Updated</h3>
+              <p className="text-blue-100/80 mb-4">
+                Join thousands of readers getting exclusive content, early access, and news about the Rivenfall Academy series.
               </p>
               <Link
                 href="/newsletter"
-                className="inline-flex items-center gap-2 bg-secondary text-foreground px-4 py-2 rounded-lg font-semibold hover:bg-secondary/80 transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors w-full justify-center"
               >
+                <Mail size={16} />
                 Join Newsletter
               </Link>
             </div>

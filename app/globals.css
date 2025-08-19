@@ -11,6 +11,14 @@
   --gold-light: #ffd700;
   --gold-dark: #b8860b;
   --black-soft: #1c1c1c;
+  
+  /* Magical blue theme for Rivenfall Academy */
+  --magic-blue: #1e40af;
+  --magic-blue-light: #3b82f6;
+  --magic-blue-dark: #1e3a8a;
+  --magic-blue-glow: rgba(59, 130, 246, 0.4);
+  --whimsical-purple: #8b5cf6;
+  --enchanted-cyan: #06b6d4;
 }
 
 @theme inline {
@@ -117,4 +125,62 @@ body {
 
 .book-cover-glow:hover::before {
   opacity: 1;
+}
+
+/* Rivenfall Academy Magical Theme */
+.rivenfall-card {
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(20px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.rivenfall-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1), transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1), transparent 50%);
+  pointer-events: none;
+}
+
+.rivenfall-card:hover {
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2), 
+              0 0 60px rgba(139, 92, 246, 0.1);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.rivenfall-title {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+.magic-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 50%;
+  animation: sparkle 2s infinite;
+}
+
+.magic-sparkle:nth-child(2) {
+  animation-delay: 0.5s;
+  background: #8b5cf6;
+}
+
+.magic-sparkle:nth-child(3) {
+  animation-delay: 1s;
+  background: #06b6d4;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
 }

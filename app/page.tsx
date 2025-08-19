@@ -167,46 +167,55 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Book 3 - Rivenfall Academy */}
+            {/* Book 3 - Rivenfall Academy - FEATURED WITH MAGICAL THEME */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="elegant-card rounded-3xl p-8"
+              className="rivenfall-card rounded-3xl p-8 relative"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-2 text-gradient">Rivenfall Academy</h3>
-                <p className="text-foreground/60">Where secrets bind stronger than spells</p>
+              {/* Magical sparkles */}
+              <div className="magic-sparkle" style={{top: '20px', left: '30px'}}></div>
+              <div className="magic-sparkle" style={{top: '60px', right: '40px'}}></div>
+              <div className="magic-sparkle" style={{bottom: '40px', left: '50%'}}></div>
+              
+              <div className="text-center mb-8 relative z-10">
+                <h3 className="text-3xl font-bold mb-2 rivenfall-title">Rivenfall Academy</h3>
+                <p className="text-blue-200/80">Where secrets bind stronger than spells</p>
+                <div className="mt-2 text-sm text-blue-300/70 font-medium">✨ NOW AVAILABLE FOR $0.99 ✨</div>
               </div>
               
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="book-cover-glow">
+              <div className="flex flex-col lg:flex-row gap-8 items-center relative z-10">
+                <div className="book-cover-glow relative">
+                  <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-xl"></div>
                   <Image
                     src="/images/rivenfall-academy-chains-cover.jpg"
                     alt="The Chains That Bind book cover"
                     width={280}
                     height={420}
-                    className="rounded-xl shadow-2xl"
+                    className="rounded-xl shadow-2xl relative z-10"
                   />
                 </div>
                 
                 <div className="flex-1 text-center lg:text-left">
-                  <h4 className="text-2xl font-bold mb-3">The Chains That Bind</h4>
-                  <p className="text-primary font-semibold mb-4">Book One • Coming Soon</p>
-                  <p className="text-foreground/70 mb-6 leading-relaxed">
+                  <h4 className="text-2xl font-bold mb-3 text-white">The Chains That Bind</h4>
+                  <p className="text-blue-300 font-semibold mb-4">Book One • Available Now</p>
+                  <p className="text-blue-100/80 mb-6 leading-relaxed">
                     When Rowan Ashbourne discovers a glowing rune in his village, he's summoned to Rivenfall Academy, a castle suspended above the trees by colossal silver chains. As he masters his strange new powers, he learns the chains are weakening, and with them, the bonds that protect the realm itself.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    <a
+                      href="https://www.amazon.co.uk/dp/B0DQ8JSFS1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/25"
                     >
-                      Request ARC
-                      <Mail size={16} />
-                    </Link>
+                      Buy for $0.99
+                      <ShoppingCart size={16} />
+                    </a>
                     <Link
                       href="/books/rivenfall-academy"
-                      className="inline-flex items-center gap-2 magic-border px-6 py-3 rounded-lg font-semibold text-foreground hover:text-primary transition-colors text-center"
+                      className="inline-flex items-center gap-2 border border-blue-400 bg-blue-950/30 px-6 py-3 rounded-lg font-semibold text-blue-200 hover:text-white hover:bg-blue-900/40 transition-colors text-center"
                     >
                       Learn More
                     </Link>
