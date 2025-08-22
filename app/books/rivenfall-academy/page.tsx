@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Star, BookOpen, Mail, ShoppingCart, Sparkles } from 'lucide-react'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 
 export default function RivenfallAcademyPage() {
   const [email, setEmail] = useState('')
@@ -19,31 +18,27 @@ export default function RivenfallAcademyPage() {
     setError('')
     
     try {
-      // EmailJS integration
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error('EmailJS configuration missing. Please set up your environment variables.')
-      }
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_email: email,
-          subject: 'ARC Request - The Chains That Bind',
-          message: `New ARC request for The Chains That Bind from: ${email}`,
-          to_name: 'J. Vale',
+      const response = await fetch('/api/arc-requests', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        publicKey
-      )
+        body: JSON.stringify({
+          email,
+          book: 'The Chains That Bind'
+        })
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit request')
+      }
       
       setIsSubmitted(true)
     } catch (err) {
-      console.error('Failed to send email:', err)
-      setError('Failed to subscribe. Please try again.')
+      console.error('Failed to submit ARC request:', err)
+      setError(err instanceof Error ? err.message : 'Failed to submit request. Please try again.')
     } finally {
       setIsLoading(false)
     }
