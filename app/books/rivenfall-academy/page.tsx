@@ -4,8 +4,26 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Star, BookOpen, Mail, ShoppingCart, Sparkles } from 'lucide-react'
+import { useState } from 'react'
 
 export default function RivenfallAcademyPage() {
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Get Substack URL from environment variables
+    const substackUrl = process.env.NEXT_PUBLIC_SUBSTACK_URL
+    
+    if (substackUrl) {
+      // Redirect to Substack signup with email pre-filled
+      const substackSignupUrl = `${substackUrl}/subscribe?email=${encodeURIComponent(email)}&utm_source=rivenfall-arc`
+      window.open(substackSignupUrl, '_blank')
+    }
+    
+    setIsSubmitted(true)
+  }
   return (
     <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="max-w-7xl mx-auto">
@@ -72,6 +90,58 @@ export default function RivenfallAcademyPage() {
             <blockquote className="text-2xl italic text-blue-100/90 mb-8 border-l-4 border-blue-400 pl-6 leading-relaxed">
               "Some chains protect as much as they confine — but even the strongest can be broken."
             </blockquote>
+
+            {/* Free ARC Copy Section */}
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 mb-6 shadow-xl border border-indigo-400/30">
+              {!isSubmitted ? (
+                <>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Mail className="text-white" size={24} />
+                    <h3 className="text-2xl font-bold text-white">Get a Free ARC Copy!</h3>
+                  </div>
+                  <p className="text-indigo-100 mb-4 text-lg">
+                    Subscribe to receive an <strong>Advanced Reader Copy</strong> of The Chains That Bind before anyone else!
+                  </p>
+                  <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email"
+                        required
+                        className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                      />
+                      <button
+                        type="submit"
+                        className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors shadow-lg"
+                      >
+                        <Sparkles size={16} />
+                        Get Free ARC
+                      </button>
+                    </div>
+                  </form>
+                  <p className="text-xs text-indigo-100/70 mt-3">
+                    Join the inner circle. No spam, just magic.
+                  </p>
+                </>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center py-2"
+                >
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Sparkles className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Welcome to the Inner Circle!</h3>
+                  <p className="text-indigo-100 text-sm">
+                    Check your email for your free ARC copy. A new tab has opened for you to complete your subscription.
+                  </p>
+                </motion.div>
+              )}
+            </div>
 
             {/* Amazon Purchase Section */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 shadow-xl">
