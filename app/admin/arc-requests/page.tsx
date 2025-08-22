@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { Mail, Download, Calendar, Book } from 'lucide-react'
+import { Mail, Download, Calendar, Book, Lock } from 'lucide-react'
 
 interface ArcRequest {
   id: string
@@ -15,10 +15,41 @@ export default function ArcRequestsAdmin() {
   const [requests, setRequests] = useState<ArcRequest[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState('')
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [password, setPassword] = useState('')
+  const [authError, setAuthError] = useState('')
 
   useEffect(() => {
-    fetchRequests()
+    // Check if user is already authenticated
+    const authStatus = localStorage.getItem('admin-authenticated')
+    if (authStatus === 'true') {
+      setIsAuthenticated(true)
+      fetchRequests()
+    } else {
+      setIsLoading(false)
+    }
   }, [])
+
+  const handleAuth = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setAuthError('')
+    
+    // Simple password check - in production, use proper authentication
+    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === 'jvale2024admin') {
+      setIsAuthenticated(true)
+      localStorage.setItem('admin-authenticated', 'true')
+      fetchRequests()
+    } else {
+      setAuthError('Invalid password')
+    }
+  }
+
+  const handleLogout = () => {
+    setIsAuthenticated(false)
+    localStorage.removeItem('admin-authenticated')
+    setPassword('')
+    setRequests([])
+  }
 
   const fetchRequests = async () => {
     try {
@@ -72,6 +103,57 @@ export default function ArcRequestsAdmin() {
     return acc
   }, {} as Record<string, number>)
 
+  // Show login form if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen py-20 px-4 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="magic-border rounded-xl p-8 w-full max-w-md"
+        >
+          <div className="text-center mb-6">
+            <Lock className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h1 className="text-2xl font-bold">Admin Login</h1>
+            <p className="text-foreground/70">Enter password to access ARC requests</p>
+          </div>
+          
+          <form onSubmit={handleAuth} className="space-y-4">
+            <div>
+              <label htmlFor="password" className="block text-sm font-semibold mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border/50 text-foreground placeholder-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Enter admin password"
+              />
+            </div>
+            
+            {authError && (
+              <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+                {authError}
+              </div>
+            )}
+            
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full bg-primary text-primary-foreground px-4 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50"
+            >
+              {isLoading ? 'Checking...' : 'Login'}
+            </button>
+          </form>
+        </motion.div>
+      </div>
+    )
+  }
+
   if (isLoading) {
     return (
       <div className="min-h-screen py-20 px-4 flex items-center justify-center">
@@ -100,13 +182,22 @@ export default function ArcRequestsAdmin() {
                 Manage Advanced Reader Copy requests
               </p>
             </div>
-            <button
-              onClick={downloadCSV}
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-            >
-              <Download size={16} />
-              Export CSV
-            </button>
+            <div className="flex gap-3">
+              <button
+                onClick={downloadCSV}
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              >
+                <Download size={16} />
+                Export CSV
+              </button>
+              <button
+                onClick={handleLogout}
+                className="inline-flex items-center gap-2 bg-secondary text-foreground px-4 py-2 rounded-lg font-semibold hover:bg-secondary/80 transition-colors border border-border/50"
+              >
+                <Lock size={16} />
+                Logout
+              </button>
+            </div>
           </div>
         </motion.div>
 
