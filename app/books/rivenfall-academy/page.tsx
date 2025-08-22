@@ -5,24 +5,48 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Star, BookOpen, Mail, ShoppingCart, Sparkles } from 'lucide-react'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function RivenfallAcademyPage() {
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsLoading(true)
+    setError('')
     
-    // Get Substack URL from environment variables
-    const substackUrl = process.env.NEXT_PUBLIC_SUBSTACK_URL
-    
-    if (substackUrl) {
-      // Redirect to Substack signup with email pre-filled
-      const substackSignupUrl = `${substackUrl}/subscribe?email=${encodeURIComponent(email)}&utm_source=rivenfall-arc`
-      window.open(substackSignupUrl, '_blank')
+    try {
+      // EmailJS integration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing. Please set up your environment variables.')
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_email: email,
+          subject: 'ARC Request - The Chains That Bind',
+          message: `New ARC request for The Chains That Bind from: ${email}`,
+          to_name: 'J. Vale',
+        },
+        publicKey
+      )
+      
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error('Failed to send email:', err)
+      setError('Failed to subscribe. Please try again.')
+    } finally {
+      setIsLoading(false)
     }
-    
-    setIsSubmitted(true)
   }
   return (
     <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -114,13 +138,17 @@ export default function RivenfallAcademyPage() {
                       />
                       <button
                         type="submit"
-                        className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors shadow-lg"
+                        disabled={isLoading}
+                        className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <Sparkles size={16} />
-                        Get Free ARC
+                        <Sparkles size={16} className={isLoading ? 'animate-pulse' : ''} />
+                        {isLoading ? 'Sending...' : 'Get Free ARC'}
                       </button>
                     </div>
                   </form>
+                  {error && (
+                    <p className="text-xs text-red-300 mt-2">{error}</p>
+                  )}
                   <p className="text-xs text-indigo-100/70 mt-3">
                     Join the inner circle. No spam, just magic.
                   </p>
@@ -137,7 +165,7 @@ export default function RivenfallAcademyPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Welcome to the Inner Circle!</h3>
                   <p className="text-indigo-100 text-sm">
-                    Check your email for your free ARC copy. A new tab has opened for you to complete your subscription.
+                    Thank you for your interest! You'll receive your free ARC copy via email shortly.
                   </p>
                 </motion.div>
               )}
