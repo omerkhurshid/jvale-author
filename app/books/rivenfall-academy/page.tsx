@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Star, BookOpen, Mail, ShoppingCart, Sparkles } from 'lucide-react'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function RivenfallAcademyPage() {
   const [email, setEmail] = useState('')
@@ -18,22 +19,27 @@ export default function RivenfallAcademyPage() {
     setError('')
     
     try {
-      const response = await fetch('/api/arc-requests', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          book: 'The Chains That Bind'
-        })
-      })
+      // EmailJS integration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to submit request')
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing. Please check your environment variables.')
       }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: 'ARC Request',
+          from_email: email,
+          subject: 'ARC Request for The Chains That Bind',
+          message: `New ARC request for "The Chains That Bind" from ${email}.\n\nPlease send the Advanced Reader Copy to this email address.\n\nBook: Rivenfall Academy - The Chains That Bind\nRequested by: ${email}\nDate: ${new Date().toLocaleDateString()}`,
+          to_name: 'J. Vale',
+        },
+        publicKey
+      )
       
       setIsSubmitted(true)
     } catch (err) {
